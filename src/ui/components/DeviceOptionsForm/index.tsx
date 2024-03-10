@@ -88,6 +88,8 @@ const userDefinesToCategories = (
 
   const keysToCategories: UserDefinesKeysByCategory = {
     [UserDefineCategory.RegulatoryDomains]: [
+      UserDefineKey.REGULATORY_DOMAIN_AU_433,
+      UserDefineKey.REGULATORY_DOMAIN_EU_433,
       UserDefineKey.REGULATORY_DOMAIN_AU_915,
       UserDefineKey.REGULATORY_DOMAIN_EU_868,
       UserDefineKey.REGULATORY_DOMAIN_FCC_915,

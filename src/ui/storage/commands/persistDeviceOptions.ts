@@ -35,6 +35,9 @@ const persistDeviceOptions = async (
         }
         if (userDefine.optionGroup && userDefine.enabled) {
           switch (userDefine.optionGroup) {
+            case UserDefineOptionGroup.RegulatoryDomain433:
+              await storage.setRegulatoryDomain433(userDefine.key);
+              break;
             case UserDefineOptionGroup.RegulatoryDomain900:
               await storage.setRegulatoryDomain900(userDefine.key);
               break;

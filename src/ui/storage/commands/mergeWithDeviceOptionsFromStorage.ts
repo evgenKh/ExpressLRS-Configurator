@@ -16,6 +16,7 @@ const mergeWithDeviceOptionsFromStorage = async (
     : null;
   const wifiSSID = await storage.getWifiSSID();
   const wifiPassword = await storage.getWifiPassword();
+  const regulatoryDomain433 = await storage.getRegulatoryDomain433();
   const regulatoryDomain900 = await storage.getRegulatoryDomain900();
   const regulatoryDomain2400 = await storage.getRegulatoryDomain2400();
 
@@ -45,6 +46,14 @@ const mergeWithDeviceOptionsFromStorage = async (
       return {
         ...deviceOption,
         value: wifiPassword,
+      };
+    }
+    if (
+      deviceOption.optionGroup === UserDefineOptionGroup.RegulatoryDomain433
+    ) {
+      return {
+        ...deviceOption,
+        enabled: deviceOption.key === regulatoryDomain433,
       };
     }
     if (

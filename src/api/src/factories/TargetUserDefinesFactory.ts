@@ -28,9 +28,17 @@ export default class TargetUserDefinesFactory {
           UserDefineOptionGroup.RegulatoryDomain900
         );
       case UserDefineKey.REGULATORY_DOMAIN_AU_433:
-        return UserDefine.Boolean(UserDefineKey.REGULATORY_DOMAIN_AU_433);
+        return UserDefine.Boolean(
+          UserDefineKey.REGULATORY_DOMAIN_AU_433,
+          false,
+          UserDefineOptionGroup.RegulatoryDomain433
+        );
       case UserDefineKey.REGULATORY_DOMAIN_EU_433:
-        return UserDefine.Boolean(UserDefineKey.REGULATORY_DOMAIN_EU_433);
+        return UserDefine.Boolean(
+          UserDefineKey.REGULATORY_DOMAIN_EU_433,
+          false,
+          UserDefineOptionGroup.RegulatoryDomain433
+        );
       case UserDefineKey.REGULATORY_DOMAIN_FCC_915:
         return UserDefine.Boolean(
           UserDefineKey.REGULATORY_DOMAIN_FCC_915,

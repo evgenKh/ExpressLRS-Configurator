@@ -442,6 +442,7 @@ export enum UserDefineKind {
 }
 
 export enum UserDefineOptionGroup {
+  RegulatoryDomain433 = 'RegulatoryDomain433',
   RegulatoryDomain900 = 'RegulatoryDomain900',
   RegulatoryDomain2400 = 'RegulatoryDomain2400',
 }

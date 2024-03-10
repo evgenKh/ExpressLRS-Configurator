@@ -322,6 +322,14 @@ export default class DeviceDescriptionsLoader {
         targetUserDefinesFactory.build(UserDefineKey.REGULATORY_DOMAIN_IN_866)
       );
     }
+    if (args.target.includes('_433.')) {
+      userDefines.push(
+        targetUserDefinesFactory.build(UserDefineKey.REGULATORY_DOMAIN_AU_433)
+      );
+      userDefines.push(
+        targetUserDefinesFactory.build(UserDefineKey.REGULATORY_DOMAIN_EU_433)
+      );
+    }
     if (['esp32', 'esp8285'].includes(config.platform)) {
       userDefines.push(
         targetUserDefinesFactory.build(UserDefineKey.HOME_WIFI_SSID)
